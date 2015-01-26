@@ -28,9 +28,9 @@ using NHibernate.Linq.Visitors;
 
 namespace NHibernate.FullText
 {
-	public class MsSql2008FullTextDialect : Dialect.MsSql2008Dialect
+	public class MsSql2005FullTextDialect : Dialect.MsSql2005Dialect
 	{
-		public MsSql2008FullTextDialect()
+		public MsSql2005FullTextDialect()
 		{
 			// Tell NHibernate that contains() and freetext() are available as SQL functions
 			RegisterFunction("contains", new StandardSQLFunction("contains", null));
@@ -40,6 +40,10 @@ namespace NHibernate.FullText
 			DefaultProperties["linqtohql.generatorsregistry"] 
 					= typeof(FullTextLinqtoHqlGeneratorsRegistry).AssemblyQualifiedName;
 		}
+	}
+
+	public class MsSql2008FullTextDialect : MsSql2005FullTextDialect
+	{
 	}
 
 	public class MsSql2012FullTextDialect : MsSql2008FullTextDialect

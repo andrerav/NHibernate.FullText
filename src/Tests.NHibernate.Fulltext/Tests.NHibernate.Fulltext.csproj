@@ -62,9 +62,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Model\Content.cs" />
-    <Compile Include="MsSql2012FullTextTests.cs" />
+    <Compile Include="MsSql2014FullTextTests.cs" />
     <Compile Include="SessionManagement.cs" />
-    <Compile Include="MsSql2008FullTextTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

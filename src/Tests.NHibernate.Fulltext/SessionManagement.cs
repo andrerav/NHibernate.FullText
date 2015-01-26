@@ -18,7 +18,7 @@ namespace Tests.NHibernate.Fulltext
 		{
 			return Fluently.Configure()
 			  .Database(
-				FluentNHibernate.Cfg.Db.MsSqlConfiguration.MsSql2008
+				FluentNHibernate.Cfg.Db.MsSqlConfiguration.MsSql2012
 					.ConnectionString("server=localhost;Integrated Security=SSPI;database=NHFullTextTest")
 					.Dialect<T>()
 			  )
