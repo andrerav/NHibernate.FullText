@@ -49,7 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MsSqlFullTextDialect.cs" />
+    <Compile Include="Criterion\FullTextCriterion.cs" />
+    <Compile Include="Criterion\FullTextExpression.cs" />
+    <Compile Include="Dialect\FullTextDialectHelper.cs" />
+    <Compile Include="Dialect\MsSql2005FullTextDialect.cs" />
+    <Compile Include="Dialect\MsSql2008FullTextDialect.cs" />
+    <Compile Include="Dialect\MsSql2012FullTextDialect.cs" />
+    <Compile Include="FullTextDialectExtensions.cs" />
+    <Compile Include="FullTextHelper.cs" />
+    <Compile Include="Linq\Functions\FullTextLinqtoHqlGeneratorsRegistry.cs" />
+    <Compile Include="Linq\Functions\MsSqlFullTextGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

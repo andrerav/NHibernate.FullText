@@ -2,7 +2,9 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate;
+using NHibernate.Dialect;
 using NHibernate.FullText;
+using NHibernate.FullText.Dialect;
 using NHibernate.Linq;
 using Tests.NHibernate.Fulltext.Model;
 
@@ -16,7 +18,7 @@ namespace Tests.NHibernate.Fulltext
 		[ClassInitialize]
 		public static void ClassInitialize(TestContext context)
 		{
-			session = SessionManagement.CreateSessionFactory<MsSql2014FullTextDialect>().OpenSession();	
+			session = SessionManagement.CreateSessionFactory<MsSql2012FullTextDialect>().OpenSession();	
 		}
 
 		[ClassCleanup]
