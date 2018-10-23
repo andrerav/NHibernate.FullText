@@ -23,7 +23,7 @@ namespace NHibernate.FullText.Criterion
             _pattern = pattern;
             _language = language;
 
-            _typedValue = new TypedValue(NHibernateUtil.String, pattern, EntityMode.Poco);
+            _typedValue = new TypedValue(NHibernateUtil.String, pattern);
 
         }
         public override string ToString()
@@ -36,9 +36,9 @@ namespace NHibernate.FullText.Criterion
             return string.Format("{0}(({1}), '{2}')", _functionName, columns, _pattern);
         }
 
-        public override SqlString ToSqlString(ICriteria criteria, ICriteriaQuery criteriaQuery, IDictionary<string, IFilter> enabledFilters)
+        public override SqlString ToSqlString(ICriteria criteria, ICriteriaQuery criteriaQuery)
         {
-            var namesUsingProjections = _projections.Select(p => SqlStringHelper.RemoveAsAliasesFromSql(p.ToSqlString(criteria, criteriaQuery.GetIndexForAlias(), criteriaQuery, enabledFilters))).ToArray();
+            var namesUsingProjections = _projections.Select(p => SqlStringHelper.RemoveAsAliasesFromSql(p.ToSqlString(criteria, criteriaQuery.GetIndexForAlias(), criteriaQuery))).ToArray();
 
             var parameter = criteriaQuery.NewQueryParameter(_typedValue).Single();
 

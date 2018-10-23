@@ -5,6 +5,7 @@ using NHibernate.Hql.Ast;
 using NHibernate.Linq;
 using NHibernate.Linq.Functions;
 using NHibernate.Linq.Visitors;
+using NHibernate.Util;
 
 namespace NHibernate.FullText.Linq.Functions
 {
@@ -18,7 +19,7 @@ namespace NHibernate.FullText.Linq.Functions
         public MsSqlFullTextGenerator(string functionName, Expression<System.Action> expression)
         {
             FunctionName = functionName;
-            SupportedMethods = new[] { ReflectionHelper.GetMethod(expression) };
+            SupportedMethods = new[] { ReflectHelper.GetMethod(expression) };
         }
 
         public override HqlTreeNode BuildHql(MethodInfo method, Expression targetObject, ReadOnlyCollection<Expression> arguments, HqlTreeBuilder treeBuilder, IHqlExpressionVisitor visitor)

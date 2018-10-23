@@ -38,7 +38,7 @@ namespace NHibernate.FullText.Criterion
         {
             return new FullTextCriterion("freetext" , new[] { projection }, pattern, language);
         }
-    
+
         public static AbstractCriterion FreeText(IProjection projection, string pattern)
         {
             return new FullTextCriterion("freetext", new[] { projection }, pattern, null);

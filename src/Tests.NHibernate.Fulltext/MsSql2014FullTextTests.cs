@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using NHibernate;
 using NHibernate.Dialect;
 using NHibernate.FullText;
@@ -10,7 +12,6 @@ using Tests.NHibernate.Fulltext.Model;
 
 namespace Tests.NHibernate.Fulltext
 {
-	[TestClass]
 	public class MsSql2014FullTextTests
 	{
 		private static ISession session;
