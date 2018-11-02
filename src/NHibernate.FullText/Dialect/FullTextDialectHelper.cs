@@ -13,7 +13,7 @@ namespace NHibernate.FullText.Dialect
             // Tell NHibernate that contains() and freetext() are available as SQL functions
             RegisterFunction(dialect,"contains", new StandardSQLFunction("contains", null));
             RegisterFunction(dialect,"freetext", new StandardSQLFunction("freetext", null));
-            
+
             // This trick prevents the need to configure the generator specifically
             dialect.DefaultProperties["linqtohql.generatorsregistry"] = typeof(FullTextLinqtoHqlGeneratorsRegistry).AssemblyQualifiedName;
         }
