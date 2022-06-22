@@ -49,7 +49,7 @@ namespace NHibernate.FullText.Criterion
             sqlStringBuilder.Add("(");
             for (var i = 0; i < namesUsingProjections.Length; i++)
             {
-                sqlStringBuilder.Add(namesUsingProjections[0]);
+                sqlStringBuilder.Add(namesUsingProjections[i]);
                 if (i != namesUsingProjections.Length - 1)
                     sqlStringBuilder.Add(",");
             }
