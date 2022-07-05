@@ -1,0 +1,19 @@
+<Project>
+	<PropertyGroup>
+		<!-- Properties related to build/pack -->
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+    <PropertyGroup>
+		<!-- Metadata -->
+		<Authors>andrerav</Authors>
+		<Copyright>Copyright (c) $([System.DateTime]::Now.ToString(`yyyy`)) Andreas Ravnestad</Copyright>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/andrerav/NHibernate.FullText</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/andrerav/NHibernate.FullText</RepositoryUrl>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageIconUrl>https://raw.githubusercontent.com/nhibernate/nhibernate-core/master/logo/NHibernate-NuGet.png</PackageIconUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>Fulltext;NHibernate;Extension;Search</PackageTags>
+        <LangVersion>10</LangVersion>	
+    </PropertyGroup>
+</Project>
